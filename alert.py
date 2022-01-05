@@ -15,7 +15,7 @@ def send_discord_message(mess):
   }
   requests.post(WEBHOOK_URL, json=payload)
 
-th = ticker.history(period="max", interval="5m")
+th = ticker.history(period="1mo", interval="5m")
 
 adx = th.ta.adx()
 rsi = th.ta.rsi()
